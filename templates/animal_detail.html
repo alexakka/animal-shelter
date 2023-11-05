@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animal.animal_name</title>
+
+</head>
+
+
+<body>
+    <p>Ім'я: {{ animal.animal_name }}</p>
+    <p>Вид: {{ animal.species }}</p>
+    <p>Порода: {{ animal.breed }}</p>
+    <p>Вік: {{ animal.age }}</p>
+    <p>Опис: {{ animal.description }}</p>
+    <img src="{{ animal.image.url }}" alt="{{ animal.animal_name }} Image">
+</body>
+</html>
