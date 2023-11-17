@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/headerplusfooter.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <script src="js/main.js"></script>
+</head>
+
+
+<body>
+    <header>
+        
+        <img id="logo-img" src="img/round-logo.png" alt="name-logo">
+        <h1 class="name-logo">Loving Tails</h1>
+        <!--
+        <div id="lang-select">
+            <button class="lang-button">UA</button>
+            <button class="lang-button">|</button>
+            <button class="lang-button">EN</button>
+        </div>
+        -->
+    </header>
+
+    <div class="filling-of-site">
+        <button class="add_for_admin"><img class="add-plus" src="img/plus-svgrepo-com.svg" alt="add"></button>
+        
+        <div style=" display: flex;"> <!--рядок для 5 елeментів-->
+
+            {% for animal in context %}
+
+                <a href="{% url 'animal_detail' animal.id %}">
+                    <button class="button-for-el">
+                        <div class="wrapper-for-elem">
+                            <div class="photo-of-elem">
+                                <img class="img-of-elem" src="{{ animal.image.url }}" alt="photo">
+                            </div>
+                            <div class="short-discr-of-elem">
+                                <p class="descr-for-el">{{ animal.animal_name }}</p>
+                                <p class="descr-for-el">{{animal.shelter.address}}</p>
+                            </div>
+                        </div>
+                    </button>
+                </a>
+            {% endfor %}
+
+            <!--end-->
+
+
+        </div>
+
+
+
+    </div>
+
+    <footer>
+
+    </footer>
+</body>
+</html>

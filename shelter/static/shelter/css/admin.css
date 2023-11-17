@@ -1,3 +1,28 @@
+/*for admin page(index)*/
+   
+.add_for_admin{
+    height: 80px;
+    width: 80px;
+    border-radius: 50px;
+    border: 1px solid var(--secondary-color);
+    position: absolute;
+    top: -120px;
+    left: 90%;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.add-plus{
+    height: 70px;
+    width: 70px;
+}
+
+
+
+
+/*for admin page(elem)*/
+
 textarea{
     resize: none;
     overflow: hidden; /* Забезпечте, щоб текст не був видимий за межами textarea */
