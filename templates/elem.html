@@ -27,17 +27,17 @@
     <div class="filling-of-site">
         <div class="wrapper-for-descr">
             <div class="photo-of-elem-for-an">
-                <img class="photo-el" src="" alt="photo of the animal">
+                <img class="photo-el" src="{{ animal.image.url }}" alt="{{ animal.animal_name }} Image">
             </div>
             <div class="description-of-the-animal">
-                <p class="p-short-descr">name</p>
-                <p class="p-short-descr">phone</p>
-                <p class="p-short-descr">email</p>
-                <p class="p-short-descr">location</p>
+                <p class="p-short-descr">{{ animal.animal_name }}</p>
+                <p class="p-short-descr">{{ animal.species }}</p>
+                <p class="p-short-descr">{{ animal.breed }}</p>
+                <p class="p-short-descr">{{ animal.age }}</p>
             </div>
         </div>
         <div class="div-for-descr">
-            <p class="p-for-descr">description</p>
+            <p class="p-for-descr">{{ animal.description }}</p>
         </div>
     </div>
 
