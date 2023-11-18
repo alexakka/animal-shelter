@@ -3,190 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>reg</title>
     <link rel="stylesheet" href="css/headerplusfooter.css">
-    <link rel="stylesheet" href="css/main.css">
-    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/reg.css">
 </head>
-
-
 <body>
-    <header>
-        
-        <img id="logo-img" src="img/round-logo.png" alt="name-logo">
-        <h1 class="name-logo">Loving Tails</h1>
-        <div id="lang-select">
-            <button class="lang-button">UA</button>
-            <button class="lang-button">|</button>
-            <button class="lang-button">EN</button>
-        </div>
-        
-    </header>
-
-    <div class="filling-of-site">
-        <!--<button class="add_for_admin"><div >+</div></button>-->
-        
-        <div > <!--рядок для 5 елиментів-->
-
-
-            <!--початок-->
-            <a href="#">
-                <button class="button-for-el">
-                    <div class="wrapper-for-elem">
-                        <div class="photo-of-elem">
-                            <img class="img-of-elem" src="" alt="photo"> 
-                        </div>
-                        <div class="short-discr-of-elem">
-                            <p class="descr-for-el">name name name name мname nameм </p>
-                            <p class="descr-for-el"> location</p>
-                        </div>
-                    </div>
-                </button>
-            </a>
-            <!--end-->
-
-
-
-            <a href="#">
-                <button class="button-for-el">
-                    <div class="wrapper-for-elem">
-                        <div class="photo-of-elem">
-                            <img class="img-of-elem" src="" alt="photo">
-                        </div>
-                        <div class="short-discr-of-elem">
-                            <p class="descr-for-el">name</p>
-                            <p class="descr-for-el">location</p>
-                        </div>
-                    </div>
-                </button>
-            </a>
-            <!--end-->
-
-
-            <a href="#">
-                <button class="button-for-el">
-                    <div class="wrapper-for-elem">
-                        <div class="photo-of-elem">
-                            <img class="img-of-elem" src="" alt="photo">
-                        </div>
-                        <div class="short-discr-of-elem">
-                            <p class="descr-for-el">name</p>
-                            <p class="descr-for-el">location</p>
-                        </div>
-                    </div>
-                </button>
-            </a>
-            <!--end-->
-
-            <a href="#">
-                <button class="button-for-el">
-                    <div class="wrapper-for-elem">
-                        <div class="photo-of-elem">
-                            <img class="img-of-elem" src="" alt="photo">
-                        </div>
-                        <div class="short-discr-of-elem">
-                            <p class="descr-for-el">name</p>
-                            <p class="descr-for-el">location</p>
-                        </div>
-                    </div>
-                </button>
-            </a>
-            <!--end-->
-
-
-            <a href="#">
-                <button class="button-for-el">
-                    <div class="wrapper-for-elem">
-                        <div class="photo-of-elem">
-                            <img class="img-of-elem" src="" alt="photo">
-                        </div>
-                        <div class="short-discr-of-elem">
-                            <p class="descr-for-el">name</p>
-                            <p class="descr-for-el">location</p>
-                        </div>
-                    </div>
-                </button>
-            </a>
-            <!--end-->
-
-        </div>
-        <!--
-        <div style=" display: flex;"> 
-            <div class="wrapper-for-elem">
-
-            </div>
-            <div class="wrapper-for-elem">
-    
-            </div>
-            <div class="wrapper-for-elem">
-    
-            </div>
-            <div class="wrapper-for-elem">
-    
-            </div>
-            <div class="wrapper-for-elem">
-    
-            </div>
-        </div>
-        -->
-
-
-        <!-- sidebar --> 
-        <!--
-        <div id="container-for-page-switchers">
-            <button class="button-for-arr"><img class="arr-button" id="left-button" src="img/triangle-svgrepo-com.svg" alt=""></button>
-            <button class="page-switcher">#</button>
-            <button class="page-switcher">#</button>
-            <button class="page-switcher">#</button>
-            <button class="page-switcher">#</button>
-            <button class="page-switcher">#</button>
-            <button class="button-for-arr"><img class="arr-button" id="right-button" src="img/triangle-svgrepo-com.svg" alt=""></button>
-        </div>
-        -->
-
-
-
+    <div class="box-for-reg-or-exit">
+        <form action="">
+            <p class="p-reg">Реєстрація</p>
+            <input class="input-for-reg" type="text" name="username" placeholder="Ім'я">
+            <input class="input-for-reg" type="text" name="username" placeholder="Прізвище">
+            <input class="input-for-reg" type="text" name="username" placeholder="Номер телефону притулку">
+            <input class="input-for-reg" type="text" name="username" placeholder="Пошта">
+            <input class="input-for-reg" type="text" name="username" placeholder="Адреса">
+            <input class="input-for-reg" type="text" name="username" placeholder="Пароль">
+            <button class="button-for-reg"><p>Зареєструватись</p></button>
+        </form>
     </div>
-    
-    <div class="frequently-asked-questions">
-        <p class="inscription-question">Питання:</p>
-        <div class="block-for-questions">
-            <p class="question-n">Як допомоглити притулку фінансово?</p>
-            <button onclick="toggleDiv(1)" id="button1" class="question-button"><img class="arr-question-button" id="right-button" src="img/triangle-svgrepo-com.svg" alt=""></button>
-        </div>
-        <div  id="toggleDiv1" class="hidden-answer">
-            <p>До кожного з притулків прикріплені рахунки.</p>
-        </div>
-
-
-        <div class="block-for-questions">
-            <p class="question-n">Як допомоглити притулку руками?</p>
-            <button onclick="toggleDiv(2)" id="button2" class="question-button"><img class="arr-question-button" id="right-button" src="img/triangle-svgrepo-com.svg" alt=""></button>
-        </div>
-        <div  id="toggleDiv2" class="hidden-answer">
-            <p>Ви можете зателефонувати до притулку та запроплнувати свою допомогу.</p>
-        </div>
-
-
-        <div class="block-for-questions">
-            <p class="question-n">Маєте притулок та хочете приєднатись до нас?</p>
-            <button onclick="toggleDiv(3)" id="button3" class="question-button"><img class="arr-question-button" id="right-button" src="img/triangle-svgrepo-com.svg" alt=""></button>
-        </div>
-        <div  id="toggleDiv3" class="hidden-answer">
-            <p></p>
-            <p id="block-to-join">
-                <button class="button-to-join">Увійти</button>
-                <button class="button-to-join">|</button>
-                <button class="button-to-join">Реєстрація</button>
-            </p>
-
-        </div>
-
-        <div class="stub-for-question"></div>
-    </div>
-
-    <footer>
-
-    </footer>
 </body>
 </html>
