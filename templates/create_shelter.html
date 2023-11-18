@@ -1,0 +1,43 @@
+<!-- registration/shelter_register.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shelter Registration</title>
+</head>
+<body>
+
+  <h2>Shelter Registration</h2>
+
+  <form method="post" action="{% url 'create_shelter' %}">
+    {% csrf_token %}
+
+    {{ form.user_id }}  <!-- Assuming your Shelter model has a 'user' field to associate with the current user -->
+
+    <label for="{{ form.shelter_name.id_for_label }}">Shelter Name:</label>
+    {{ form.shelter_name }}
+    <br>
+
+    <label for="{{ form.city.id_for_label }}">City:</label>
+    {{ form.city }}
+    <br>
+
+    <label for="{{ form.address.id_for_label }}">Address:</label>
+    {{ form.address }}
+    <br>
+
+    <label for="{{ form.phone.id_for_label }}">Phone:</label>
+    {{ form.phone }}
+    <br>
+
+    <label for="{{ form.email.id_for_label }}">Email:</label>
+    {{ form.email }}
+    <br>
+
+    <button type="submit">Register</button>
+  </form>
+
+</body>
+</html>
