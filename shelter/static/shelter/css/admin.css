@@ -1,0 +1,80 @@
+/*for admin page(index)*/
+   
+.add_for_admin{
+    height: 80px;
+    width: 80px;
+    border-radius: 50px;
+    border: 1px solid var(--secondary-color);
+    position: absolute;
+    top: -120px;
+    left: 90%;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.add-plus{
+    height: 70px;
+    width: 70px;
+}
+
+
+
+
+/*for admin page(elem)*/
+
+textarea{
+    resize: none;
+    overflow: hidden; /* Забезпечте, щоб текст не був видимий за межами textarea */
+}
+.p-admin{
+    padding: 10px;
+    margin: 0px;
+    color: var(--primary-color);
+
+}
+
+.admin-button{
+    position: absolute;
+    right: 0px;
+    width: 200px;
+    background-color: var(--secondary-color);
+    border-radius: 15px 0px 0px 15px;
+}
+
+.admin-button-delete{
+    top: 70px;
+}
+
+.admin-button-edit{
+    top: 150px;
+}
+
+#div2{
+    display: none;
+}
+
+.input-desc{
+    display: flex;
+    height: 35px;
+    margin: 30px 0px 30px 0px;
+    width: 400px;
+    border-radius: 15px;
+    font-size: 32px;
+}
+
+.textarea-for-descr{
+    min-width: 1400px;
+    max-width: 1400px;
+    min-height: 66px;
+    margin: 0px 30px 0px 30px;
+    font-size: 32px;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+#resizableTextarea{
+    resize: none;
+    overflow-y: hidden;
+    box-sizing: border-box; 
+}

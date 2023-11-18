@@ -1,0 +1,46 @@
+p{
+    font-size: 32px;
+}
+.filling-of-site{
+    min-height: 500px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 30px;
+    padding: 20px;
+}
+
+.wrapper-for-descr{
+    display: flex;
+}
+
+.photo-of-elem-for-an{
+    min-height: 394px;
+    min-width: 700px;
+    max-height: 394px;
+    max-width: 700px;
+    border-radius: 20px;
+    border: 1px solid var(--secondary-color);
+    margin: 50px;
+}
+
+.photo-el{
+    min-height: 394px;
+    min-width: 700px;
+    max-height: 394px;
+    max-width: 700px;
+    border-radius: 20px;
+}
+
+.description-of-the-animal{
+    display: block;
+    margin-top: 30px;
+
+}
+
+.div-for-descr{
+    margin: 0px 30px 30px 30px;
+}
+
+.p-for-descr{
+    margin: 0px 30px 0px 30px;
+}
+

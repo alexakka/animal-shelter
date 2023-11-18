@@ -4,14 +4,18 @@ html{
 }
 
 :root {
-    --primary-color: white; /* Першочерговий колір */
-    --secondary-color: black; /* Другорядний колір */
+    --primary-color: #F8F9F9; /* Першочерговий колір */
+    --secondary-color:#283747; /* Другорядний колір */
     --third-color: red
 }
 
 body{
     margin: 0px;
     padding: 0px;
+}
+
+p{
+    font-family: "Nunito", sans-serif;
 }
 
 button{
