@@ -36,7 +36,7 @@
 
         <div class="wrapper-for-descr">
             <div class="photo-of-elem-for-an">
-                <img class="photo-el" src="" alt="photo of the animal">
+                <img class="photo-el" src="img/71214.jpg" alt="photo of the animal">
             </div>
             <div class="description-of-the-animal">
                 <p class="p-short-descr">name</p>
@@ -57,7 +57,16 @@
         <form action="/your-server-endpoint" method="post">
             <div class="wrapper-for-descr">
                 <div class="photo-of-elem-for-an">
-                    <img class="photo-el" src="" alt="photo of the animal">                            <!--я не знаю що потрібно написати щоб редагувати зоображення-->
+                    <div class="div1-in-photo-el">
+                        <label class="add-photo-el" for="file"></label>
+                        <input class="add-photo-el" type="file" name="file" id="file">
+                    </div>
+                    <div class="div3-in-photo-el">
+                        <img class="photo-el" src="img/71214.jpg" alt="photo of the animal">                            <!--я не знаю що потрібно написати щоб редагувати зоображення-->
+                    </div>
+                    <div class="div2-in-photo-el edit-photo">
+                        <p class="div2-in-photo-el-p">ЗАМІНИТИ ФОТО</p>
+                    </div>
                 </div>
 
                 <div class="description-of-the-animal">
@@ -70,7 +79,7 @@
             </div>
 
             <div class="div-for-descr">
-                <textarea id="resizableTextarea" oninput="resizeTextarea()" class="textarea-for-descr" id="multilineInput" rows="4" cols="50"></textarea>
+                <textarea id="resizableTextarea" oninput="resizeTextarea()" class="textarea-for-descr" id="multilineInput" rows="4" cols="50" placeholder="description"></textarea>
             </div>
 
             <button onclick="reloadPage()" class="admin-button admin-button-delete"><p class="p-admin">SAVE</p></button> <!--ця кнопка має перезапустити сторінку вже із новими значеннями-->

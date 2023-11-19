@@ -82,3 +82,18 @@ input[type="file"] {
     color: var(--secondary-color);
 }
 
+.div3-in-photo-el{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    filter: blur(3px);
+    opacity: 0.3;
+}
+
+.edit-photo{
+    position: relative;
+    top: 130px;
+    left: 220px;
+}
+
