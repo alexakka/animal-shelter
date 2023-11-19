@@ -1,6 +1,12 @@
 p{
     font-size: 32px;
 }
+input{
+    background-color: var(----primary-color);
+}
+textarea{
+    background-color: var(----primary-color);
+}
 .filling-of-site{
     min-height: 500px;
     border: 1px solid var(--secondary-color);
@@ -20,6 +26,7 @@ p{
     border-radius: 20px;
     border: 1px solid var(--secondary-color);
     margin: 50px;
+    position: relative;
 }
 
 .photo-el{
@@ -42,5 +49,36 @@ p{
 
 .p-for-descr{
     margin: 0px 30px 0px 30px;
+}
+
+
+input[type="file"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    color: #666;
+    text-indent: -9999px; 
+    border: none; 
+}
+.add-photo-el{
+    min-height: 384px;
+    min-width: 690px;
+    max-height: 384px;
+    max-width: 690px;
+    border-radius: 20px;
+}
+
+.div1-in-photo-el{
+    position: absolute;
+    z-index: 10;
+}
+
+.div2-in-photo-el{
+    position: relative;
+    top: 130px;
+    left: 250px;
+    z-index: 1;
+    filter: blur(0.5px);
+    color: var(--secondary-color);
 }
 

@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{% static 'shelter/css/main.css' %}">
     <link rel="stylesheet" href="css/elem.css">
     <!--admin-->
-    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="{% static 'shelter/css/admin.css' %}">
     <script src="js/admin.js"></script>
     <!--------->
 </head>
@@ -34,7 +34,13 @@
         <form action="/your-server-endpoint" method="post">
             <div class="wrapper-for-descr">
                 <div class="photo-of-elem-for-an">
-                    <img class="photo-el" src="" alt="photo of the animal">                            <!--я не знаю що потрібно написати щоб редагувати зоображення-->
+                    <div class="div1-in-photo-el">
+                        <label class="add-photo-el" for="file"></label>
+                        <input class="add-photo-el" type="file" name="file" id="file">
+                    </div>
+                    <div class="div2-in-photo-el">
+                        <p class="div2-in-photo-el-p">ДОДАТИ ФОТО</p>
+                    </div>
                 </div>
 
                 <div class="description-of-the-animal">
@@ -47,7 +53,7 @@
             </div>
 
             <div class="div-for-descr">
-                <textarea id="resizableTextarea" oninput="resizeTextarea()" class="textarea-for-descr" id="multilineInput" rows="4" cols="50" placeholder="description"></textarea>
+                <textarea id="resizableTextarea" oninput="resizeTextarea()" class="textarea-for-descr" id="multilineInput" rows="4" cols="50" placeholder="location"></textarea>
             </div>
 
             <button onclick="reloadPage()" class="admin-button admin-button-delete"><p class="p-admin">SAVE</p></button> <!--ця кнопка має перезапустити сторінку вже із новими значеннями-->
