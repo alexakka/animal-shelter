@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'shelter/css/headerplusfooter.css' %}">
+    <link rel="stylesheet" href="{% static 'shelter/css/main.css' %}">
+    <link rel="stylesheet" href="css/elem.css">
+    <!--admin-->
+    <link rel="stylesheet" href="css/admin.css">
+    <script src="js/admin.js"></script>
+    <!--------->
+</head>
+
+
+<body>
+    <header>
+        
+        <img id="logo-img" src="img/round-logo.png" alt="name-logo">
+        <h1 class="name-logo">Loving Tails</h1>
+        <div id="lang-select">
+            <button class="lang-button">UA</button>
+            <button class="lang-button">|</button>
+            <button class="lang-button">EN</button>
+        </div>
+        
+    </header>
+
+
+    <div id="div2" style="display: block;" class="filling-of-site" >
+        <form action="/your-server-endpoint" method="post">
+            <div class="wrapper-for-descr">
+                <div class="photo-of-elem-for-an">
+                    <img class="photo-el" src="" alt="photo of the animal">                            <!--я не знаю що потрібно написати щоб редагувати зоображення-->
+                </div>
+
+                <div class="description-of-the-animal">
+                    <input class="input-desc" type="text" name="username" placeholder="name">
+                    <input class="input-desc" type="text" name="username" placeholder="phone">
+                    <input class="input-desc" type="text" name="username" placeholder="email">
+                    <input class="input-desc" type="text" name="username" placeholder="location">
+                </div>
+
+            </div>
+
+            <div class="div-for-descr">
+                <textarea id="resizableTextarea" oninput="resizeTextarea()" class="textarea-for-descr" id="multilineInput" rows="4" cols="50" placeholder="description"></textarea>
+            </div>
+
+            <button onclick="reloadPage()" class="admin-button admin-button-delete"><p class="p-admin">SAVE</p></button> <!--ця кнопка має перезапустити сторінку вже із новими значеннями-->
+            <!--в мене кидає помилку але це напевно бо в мене намає БД. P.s.: onclick="reloadPage()" - перезапускає сторінку-->
+        </form>
+    </div>
+
+
+
+    <footer>
+
+    </footer>
+</body>
+</html>

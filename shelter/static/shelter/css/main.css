@@ -1,5 +1,5 @@
 /*admin*/
-/*
+/*      
 .add_for_admin{
     height: 100px;
     width: 100px;
@@ -12,7 +12,7 @@
 */
 
 .wrapper-for-elem{
-    width: 245px;
+    width: 240px;  /*      */
     height: 300px;
     border: 1px solid var(--secondary-color);
     border-radius: 30px;
@@ -24,7 +24,7 @@
     box-shadow: 0px 0px 61px -36px rgba(0,0,0,0.96);
 }
 .photo-of-elem{
-    width: 215px;
+    width: 210px;  /**/
     height: 150px;
     border: 1px solid var(--secondary-color);
     border-right: 0px;
@@ -34,14 +34,24 @@
     border-radius: 30px 0 0 30px;
     text-align: left;
 }
-.short-discr-of-elem{
+.img-of-elem{
     width: 215px;
     height: 150px;
+    border-radius: 30px 0 0 30px;
+    text-align: left;
+}
+.short-discr-of-elem{
+    width: 210px;  /*  */
+    max-height: 400px;
     padding-left: 30px;
     position: absolute;
     top: 180px;
     font-size: 32px;
     line-height: 0.2;
+/*
+    display: flex;
+    flex-direction: column;
+    justify-content: center;*/
 }
 .button-for-el{
     padding: 0px;
@@ -51,6 +61,8 @@
     text-align: left;
     font-size: 16px;
     line-height: 1.2;
+    /*
+    margin: 0px;*/
 }
 
 
@@ -69,6 +81,7 @@
     justify-content: center;
     align-items: center;
 }
+/*
 .button-for-arr{
     width: 60px;
     height: 60px;
@@ -86,8 +99,8 @@
     transform: rotate(90deg);
 }
 #left-button{
-    transform: rotate(270deg);
-}
+    transform: rotate(270deg);  
+}*/
 
 .frequently-asked-questions{
     margin: 70px auto;
@@ -112,7 +125,7 @@
 .block-for-questions{
     /*margin-top: 100px;
     margin-bottom: 40px;*/
-
+    
     height: 60px;
     background-color: var(--primary-color);
     border: 1px solid var(--secondary-color);
@@ -163,11 +176,3 @@
     border: none;
     outline: none;
 }
-
-.img-of-elem{
-    width: 215px;
-    height: 150px;
-    border-radius: 30px 0 0 30px;
-    text-align: left;
-}
-
