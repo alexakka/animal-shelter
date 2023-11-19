@@ -30,3 +30,17 @@ def create_shelter(request):
 
     context = {'form': form}
     return render(request, 'create_shelter.html', context)
+
+
+@login_required
+def shelter_dashboard(request, user_id):
+    print(user_id)
+    shelter = get_object_or_404(Shelter, owner=user_id)
+    print(shelter.id)
+    animals = Animal.objects.filter(shelter=shelter.id)
+    # if shelter is None:
+    #     return Animal.objects.none()
+
+    # animals = Animal.objects.filter(shelter=shelter)
+
+    return render(request, 'adminindex.html', {'animals': animals})

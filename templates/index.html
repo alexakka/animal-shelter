@@ -111,10 +111,15 @@
         <div  id="toggleDiv3" class="hidden-answer">
             <p></p>
             <p id="block-to-join">
-                <button class="button-to-join" >Увійти</button>
+                <a href="{% url 'user_login' %}">
+                    <button class="button-to-join" >Увійти</button>
+                </a>
+
                 <button class="button-to-join">|</button>
-                <a class="button-to-join" href="{% url 'register' %}"
-               role="button">Реєстрація</a>
+
+                <a href="{% url 'redister' %}">
+                    <button class="button-to-join" >Реєстрація</button>
+                </a>
             </p>
 
         </div>

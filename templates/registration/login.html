@@ -1,10 +1,28 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вхід</title>
+    <link rel="stylesheet" href="{% static 'shelter/css/headerplusfooter.css' %}">
+    <link rel="stylesheet" href="{% static 'shelter/css/reg.css' %}">
+    <link rel="stylesheet" href="{% static 'shelter/css/main.css' %}">
+    <script src="{% static 'shelter/js/main.js' %}"></script>
 </head>
 <body>
+    <div class="box-for-reg-or-exit">
+        <form method="post" action="{% url 'user_login' %}">
+            <p class="p-reg">Вхід</p>
+            {% csrf_token %}
 
+            <input class="input-for-reg" type="text" name="username" placeholder="Псевдонім">
+            <input class="input-for-reg" type="text" name="password" placeholder="Пароль">
+
+            <button class="button-for-reg"><p>Увійти</p></button>
+        </form>
+    </div>
 </body>
 </html>
+

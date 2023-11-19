@@ -1,20 +1,23 @@
+
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/headerplusfooter.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/admin.css">
-    <script src="js/main.js"></script>
+    <title>Притулок</title>
+    <link rel="stylesheet" href="{% static 'shelter/css/headerplusfooter.css' %}">
+    <link rel="stylesheet" href="{% static 'shelter/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'shelter/css/admin.css' %}">
+    <script src="{% static 'shelter/js/main.js' %}"></script>
 </head>
-
 
 <body>
     <header>
-        
-        <img id="logo-img" src="img/round-logo.png" alt="name-logo">
+
+        <img id="logo-img" src="{% static 'shelter/img/round-logo.png' %}" alt="name-logo">
         <h1 class="name-logo">Loving Tails</h1>
         <!--
         <div id="lang-select">
@@ -26,11 +29,11 @@
     </header>
 
     <div class="filling-of-site">
-        <button class="add_for_admin"><img class="add-plus" src="img/plus-svgrepo-com.svg" alt="add"></button> <!--кнопка яка відкриває adminelem.html-->
-        
+        <button class="add_for_admin"><img class="add-plus" src="{% static 'shelter/img/plus-svgrepo-com.svg' %}" alt="add"></button> <!--кнопка яка відкриває adminelem.html-->
+
         <div style=" display: flex;"> <!--рядок для 5 елeментів-->
 
-            {% for animal in context %}
+            {% for animal in animals %}
 
                 <a href="{% url 'animal_detail' animal.id %}">
                     <button class="button-for-el">
