@@ -7,6 +7,8 @@ input{
 textarea{
     background-color: var(----primary-color);
 }
+
+
 .filling-of-site{
     min-height: 500px;
     border: 1px solid var(--secondary-color);
@@ -96,4 +98,40 @@ input[type="file"] {
     top: 130px;
     left: 220px;
 }
+/*
+@media only screen and (max-width: 1000px) {
+    .wrapper-for-descr {
+        display: block;
+    }
+    .description-of-the-animal{
+        margin-left: 60px;
+    }
+}*/
+.filling-of-site{
+    min-width: 800px;             /*   */
+}
 
+
+
+
+
+@media only screen and (max-width: 1450px) {
+    .filling-of-site {
+      width: 100%;
+    }
+    .wrapper-for-descr{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1350px) {
+    .wrapper-for-descr {
+        display: block;
+    }
+    .description-of-the-animal{
+        margin-left: 60px;
+    }
+    .filling-of-site{
+        width: 800px;
+    }
+}

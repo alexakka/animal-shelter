@@ -71,7 +71,7 @@
             </div>
         </div>
         -->
-
+        <!--
         <div id="container-for-page-switchers">
             <button class="button-for-arr"><img class="arr-button" id="left-button" src="{% static 'shelter/img/triangle-svgrepo-com.svg' %}" alt=""></button>
             <button class="page-switcher">#</button>
@@ -80,51 +80,52 @@
             <button class="page-switcher">#</button>
             <button class="page-switcher">#</button>
             <button class="button-for-arr"><img class="arr-button" id="right-button" src="{% static 'shelter/img/triangle-svgrepo-com.svg' %}" alt=""></button>
-        </div>
+        </div>-->
 
     </div>
-
-    <div class="frequently-asked-questions">
-        <p class="inscription-question">Питання:</p>
-        <div class="block-for-questions">
-            <p class="question-n">Як допомоглити притулку фінансово?</p>
-            <button onclick="toggleDiv(1)" id="button1" class="question-button"><img class="arr-question-button" id="right-button" src="{% static 'shelter/img/triangle-svgrepo-com.svg' %}" alt=""></button>
+    <div class="wrapper-for-frequently-asked-questions">
+        <div class="frequently-asked-questions">
+            <p class="inscription-question">Питання:</p>
+            <div class="block-for-questions">
+                <p class="question-n">Як допомоглити притулку фінансово?</p>
+                <button onclick="toggleDiv(1)" id="button1" class="question-button"><img class="arr-question-button" id="right-button" src="{% static 'shelter/img/triangle-svgrepo-com.svg' %}" alt=""></button>
+            </div>
+            <div  id="toggleDiv1" class="hidden-answer">
+                <p>До кожного з притулків прикріплені рахунки.</p>
+            </div>
+        
+        
+            <div class="block-for-questions">
+                <p class="question-n">Як допомоглити притулку руками?</p>
+                <button onclick="toggleDiv(2)" id="button2" class="question-button"><img class="arr-question-button" id="right-button" src="{% static 'shelter/img/triangle-svgrepo-com.svg' %}" alt=""></button>
+            </div>
+            <div  id="toggleDiv2" class="hidden-answer">
+                <p>Ви можете зателефонувати до притулку та запроплнувати свою допомогу.</p>
+            </div>
+        
+        
+            <div class="block-for-questions">
+                <p class="question-n">Маєте притулок та хочете приєднатись до нас?</p>
+                <button onclick="toggleDiv(3)" id="button3" class="question-button"><img class="arr-question-button" id="right-button" src="{% static 'shelter/img/triangle-svgrepo-com.svg' %}" alt=""></button>
+            </div>
+            <div  id="toggleDiv3" class="hidden-answer">
+                <p></p>
+                <p id="block-to-join">
+                    <a href="{% url 'user_login' %}">
+                        <button class="button-to-join" >Увійти</button>
+                    </a>
+                
+                    <button class="button-to-join">|</button>
+                
+                    <a href="{% url 'redister' %}">
+                        <button class="button-to-join" >Реєстрація</button>
+                    </a>
+                </p>
+            
+            </div>
+        
+            <div class="stub-for-question"></div>
         </div>
-        <div  id="toggleDiv1" class="hidden-answer">
-            <p>До кожного з притулків прикріплені рахунки.</p>
-        </div>
-
-
-        <div class="block-for-questions">
-            <p class="question-n">Як допомоглити притулку руками?</p>
-            <button onclick="toggleDiv(2)" id="button2" class="question-button"><img class="arr-question-button" id="right-button" src="{% static 'shelter/img/triangle-svgrepo-com.svg' %}" alt=""></button>
-        </div>
-        <div  id="toggleDiv2" class="hidden-answer">
-            <p>Ви можете зателефонувати до притулку та запроплнувати свою допомогу.</p>
-        </div>
-
-
-        <div class="block-for-questions">
-            <p class="question-n">Маєте притулок та хочете приєднатись до нас?</p>
-            <button onclick="toggleDiv(3)" id="button3" class="question-button"><img class="arr-question-button" id="right-button" src="{% static 'shelter/img/triangle-svgrepo-com.svg' %}" alt=""></button>
-        </div>
-        <div  id="toggleDiv3" class="hidden-answer">
-            <p></p>
-            <p id="block-to-join">
-                <a href="{% url 'user_login' %}">
-                    <button class="button-to-join" >Увійти</button>
-                </a>
-
-                <button class="button-to-join">|</button>
-
-                <a href="{% url 'redister' %}">
-                    <button class="button-to-join" >Реєстрація</button>
-                </a>
-            </p>
-
-        </div>
-
-        <div class="stub-for-question"></div>
     </div>
 
     <footer>
