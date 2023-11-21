@@ -16,7 +16,7 @@ class Shelter(models.Model):
 
 
 class Animal(models.Model):
-    shelter = models.ForeignKey(Shelter, on_delete=models.CASCADE)
+    shelter = models.ForeignKey('Shelter', on_delete=models.CASCADE)
     animal_name = models.CharField(max_length=30)
     species = models.CharField(max_length=30)
     breed = models.CharField(max_length=30)
@@ -29,3 +29,11 @@ class Animal(models.Model):
     def __str__(self):
         return self.animal_name
 
+
+class Application(models.Model):
+    first_name = models.CharField(max_length=255)
+    second_name = models.CharField(max_length=255)
+    phone = models.CharField(max_length=13)
+    email = models.EmailField(max_length=255)
+    status = models.BooleanField(default=True)
+    animal = models.ForeignKey('Animal', on_delete=models.CASCADE)

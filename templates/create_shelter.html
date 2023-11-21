@@ -17,16 +17,11 @@
       <p class="p-reg">Створення пиритулку</p>
       {% csrf_token %}
 
-      <input type="text" name="shelter_name" placeholder="Назва притулку">
-      <br>
-      <input type="text" name="city" placeholder="Місто">
-      <br>
-      <input type="text" name="address" placeholder="Адреса">
-      <br>
-      <input type="text" name="phone" placeholder="Номер телефону">
-      <br>
-      <input type="text" name="email" placeholder="Електрона пошта">
-      <br>
+      <input class="input-for-reg" type="text" name="shelter_name" placeholder="Назва притулку">
+      <input class="input-for-reg" type="text" name="city" placeholder="Місто">
+      <input class="input-for-reg" type="text" name="address" placeholder="Адреса">
+      <input class="input-for-reg" type="text" name="phone" placeholder="Номер телефону">
+      <input class="input-for-reg" type="text" name="email" placeholder="Електрона пошта">
 
       <button class="button-for-reg" type="submit"><p>Створити</p></button>
   </form>

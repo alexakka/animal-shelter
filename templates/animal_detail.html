@@ -2,21 +2,54 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>animal.animal_name</title>
-
+    <title>Інфо про тваринку</title>
+    <link rel="stylesheet" href="{% static 'shelter/css/headerplusfooter.css' %}">
+    <link rel="stylesheet" href="{% static 'shelter/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'shelter/css/elem.css' %}">
+    <link rel="stylesheet" href="{% static 'shelter/css/admin.css' %}">
+    <script src="{% static 'shelter/js/main.js' %}"></script>
 </head>
 
 
 <body>
-    <p>Ім'я: {{ animal.animal_name }}</p>
-    <p>Вид: {{ animal.species }}</p>
-    <p>Порода: {{ animal.breed }}</p>
-    <p>Вік: {{ animal.age }}</p>
-    <p>Опис: {{ animal.description }}</p>
-    <img src="{{ animal.image.url }}" alt="{{ animal.animal_name }} Image">
+    <header>
+
+        <img id="logo-img" src="{% static 'shelter/img/round-logo.png' %}" alt="name-logo">
+        <h1 class="name-logo">Loving Tails</h1>
+        <div id="lang-select">
+            <button class="lang-button">UA</button>
+            <button class="lang-button">|</button>
+            <button class="lang-button">EN</button>
+        </div>
+
+    </header>
+
+    <div class="filling-of-site">
+        <a href="{% url 'leave_application' animal.id %}">
+            <button class="admin-button admin-button-delete"><p class="p-admin">ЗАЛИШИТИ ЗАЯВКУ</p></button>
+        </a>
+        <div class="wrapper-for-descr">
+            <div class="photo-of-elem-for-an">
+                <img class="photo-el" src="{{ animal.image.url }}" alt="{{ animal.animal_name }} Image" >
+            </div>
+            <div class="description-of-the-animal">
+                <p class="p-short-descr">{{ animal.animal_name }}</p>
+                <p class="p-short-descr">{{ animal.species }}</p>
+                <p class="p-short-descr">{{ animal.breed }}</p>
+                <p class="p-short-descr">{{ animal.age }}</p>
+                <p class="p-short-descr">location</p>
+            </div>
+        </div>
+        <div class="div-for-descr">
+            <p class="p-for-descr">{{ animal.description }}</p>
+        </div>
+    </div>
+
+    <footer>
+
+    </footer>
 </body>
 </html>

@@ -1,7 +1,7 @@
 from django.shortcuts import get_object_or_404, render, redirect
 from django.contrib.auth import login
 from django.contrib.auth.decorators import login_required
-from .forms import ShelterCreationForm
+from .forms import ShelterCreationForm, LeaveAnApplicationForm
 from .models import Shelter, Animal
 
 
@@ -34,13 +34,41 @@ def create_shelter(request):
 
 @login_required
 def shelter_dashboard(request, user_id):
-    print(user_id)
     shelter = get_object_or_404(Shelter, owner=user_id)
-    print(shelter.id)
     animals = Animal.objects.filter(shelter=shelter.id)
-    # if shelter is None:
-    #     return Animal.objects.none()
-
-    # animals = Animal.objects.filter(shelter=shelter)
 
     return render(request, 'adminindex.html', {'animals': animals})
+
+
+# def leave_application(request, animal_id):
+#     if request.method != 'POST':
+#         form = LeaveAnApplicationForm()
+#     else:
+#         form = LeaveAnApplicationForm(data=request.POST)
+#         if form.is_valid():
+#             new_application = form.save(commit=False)
+#             new_application.animal = animal_id
+#             new_application.save()
+
+#             return redirect('index')
+
+#     context = {'form': form}
+#     return render(request, 'application.html', context)
+
+
+def leave_application(request, animal_id):
+    animal = Animal.objects.get(id=animal_id)
+
+    if request.method == 'POST':
+        form = LeaveAnApplicationForm(data=request.POST)
+        if form.is_valid():
+            new_application = form.save(commit=False)
+            new_application.animal = animal
+            new_application.save()
+
+            return redirect('index')
+    else:
+        form = LeaveAnApplicationForm()
+
+    context = {'form': form, 'animal': animal}
+    return render(request, 'application.html', context)
