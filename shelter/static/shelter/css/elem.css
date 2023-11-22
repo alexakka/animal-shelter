@@ -98,15 +98,7 @@ input[type="file"] {
     top: 130px;
     left: 220px;
 }
-/*
-@media only screen and (max-width: 1000px) {
-    .wrapper-for-descr {
-        display: block;
-    }
-    .description-of-the-animal{
-        margin-left: 60px;
-    }
-}*/
+
 .filling-of-site{
     min-width: 800px;             /*   */
 }

@@ -1,4 +1,7 @@
-
+.a-for-elem{
+    background-color: var(--primary-color);
+    color: var(--primary-color);
+}
 
 .wrapper-for-elem{
     width: 245px;
@@ -13,8 +16,10 @@
     box-shadow: 0px 0px 61px -36px rgba(0,0,0,0.96);
 }
 .photo-of-elem{
-    width: 215px;
-    height: 150px;
+    max-width: 215px;
+    min-width: 215px;
+    max-height: 150px;
+    min-height: 150px;
     border: 1px solid var(--secondary-color);
     border-right: 0px;
     position: absolute;
@@ -23,6 +28,14 @@
     border-radius: 30px 0 0 30px;
     text-align: left;
 }
+.img-of-elem{
+    max-width: 214px;
+    min-width: 214px;
+    max-height: 150px;
+    min-height: 150px;
+    border-radius: 29px 0 0 29px;
+}
+
 .short-discr-of-elem{
     width: 215px;
     height: 150px;
@@ -81,6 +94,7 @@
 
 .wrapper-for-frequently-asked-questions{
     margin: 40px auto;
+    max-width: 1536px;
 }
 .frequently-asked-questions{
     margin: 30px;

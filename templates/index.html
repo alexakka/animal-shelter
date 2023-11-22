@@ -29,48 +29,29 @@
     <div class="filling-of-site">
         <!--<button class="add_for_admin"><div >+</div></button>-->
         <!--початок-->
-        <div style=" display: flex;"> <!--рядок для 5 елиментів-->
+        
 
-            {% for animal in context %}
+        {% for animal in context %}
 
-                <a href="{% url 'animal_detail' animal.id %}">
-                    <button class="button-for-el">
-                        <div class="wrapper-for-elem">
-                            <div class="photo-of-elem">
-                                <img class="img-of-elem" src="{{ animal.image.url }}" alt="photo">
-                            </div>
-                            <div class="short-discr-of-elem">
-                                <p class="descr-for-el">{{ animal.animal_name }}</p>
-                                <p class="descr-for-el">{{animal.shelter.address}}</p>
-                            </div>
+            <a class="a-for-elem" href="{% url 'animal_detail' animal.id %}">
+                <button class="button-for-el">
+                    <div class="wrapper-for-elem">
+                        <div class="photo-of-elem">
+                            <img class="img-of-elem" src="{{ animal.image.url }}" alt="photo">
                         </div>
-                    </button>
-                </a>
-            {% endfor %}
+                        <div class="short-discr-of-elem">
+                            <p class="descr-for-el">{{ animal.animal_name }}</p>
+                            <p class="descr-for-el">{{animal.shelter.address}}</p>
+                        </div>
+                    </div>
+                </button>
+            </a>
+        {% endfor %}
 
-            <!--end-->
+        <!--end-->
 
 
-        </div>
-        <!--
-        <div style=" display: flex;">
-            <div class="wrapper-for-elem">
-
-            </div>
-            <div class="wrapper-for-elem">
-
-            </div>
-            <div class="wrapper-for-elem">
-
-            </div>
-            <div class="wrapper-for-elem">
-
-            </div>
-            <div class="wrapper-for-elem">
-
-            </div>
-        </div>
-        -->
+        
 
         <!-- <div id="container-for-page-switchers">
         <div id="container-for-page-switchers">
@@ -128,44 +109,30 @@
 
             <div class="stub-for-question"></div>
         </div>
-        <div  id="toggleDiv1" class="hidden-answer">
-            <p>До кожного з притулків прикріплені рахунки.</p>
-        </div>
-
-
-        <div class="block-for-questions">
-            <p class="question-n">Як допомоглити притулку руками?</p>
-            <button onclick="toggleDiv(2)" id="button2" class="question-button"><img class="arr-question-button" id="right-button" src="{% static 'shelter/img/triangle-svgrepo-com.svg' %}" alt=""></button>
-        </div>
-        <div  id="toggleDiv2" class="hidden-answer">
-            <p>Ви можете зателефонувати до притулку та запроплнувати свою допомогу.</p>
-        </div>
-
-
-        <div class="block-for-questions">
-            <p class="question-n">Маєте притулок та хочете приєднатись до нас?</p>
-            <button onclick="toggleDiv(3)" id="button3" class="question-button"><img class="arr-question-button" id="right-button" src="{% static 'shelter/img/triangle-svgrepo-com.svg' %}" alt=""></button>
-        </div>
-        <div  id="toggleDiv3" class="hidden-answer">
-            <p></p>
-            <p id="block-to-join">
-                <a href="{% url 'user_login' %}">
-                    <button class="button-to-join" >Увійти</button>
-                </a>
-
-                <button class="button-to-join">|</button>
-
-                <a href="{% url 'register' %}">
-                    <button class="button-to-join" >Реєстрація</button>
-                </a>
-            </p>
-
-        </div>
-
-        <div class="stub-for-question"></div>
     </div>
 
     <footer>
+        <div>
+            <img id="logo-img-in-footer" src="{% static 'shelter/img/round-logo.png' %}" alt="name-logo">
+        </div>
+        <div id="div-for-info">
+            <div class="div-in-footer-1">
+                <p class="p-in-footer">Інформація про нас:</p>
+                <p class="p-in-footer">xxxxxxxxx@gmail.com</p>
+                <p class="p-in-footer">+380XXXXXXXXX</p>
+            </div>
+            <div class="div-in-footer-2">
+                <a href="#">
+                    <img class="socialnetwork" src="{% static 'shelter/img/instagram-svgrepo-com.svg' %}" alt="name-logo">
+                </a>
+                <a href="#">
+                    <img class="socialnetwork" src="{% static 'shelter/img/facebook-svgrepo-com.svg' %}" alt="name-logo">
+                </a>
+                <a href="#">
+                    <img class="socialnetwork" src="{% static 'shelter/img/telegram-svgrepo-com.svg' %}" alt="name-logo">
+                </a>
+            </div>
+        </div>
 
     </footer>
 </body>

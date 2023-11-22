@@ -92,7 +92,9 @@ header{
     right: 180px;
     background-color: var(--secondary-color);
     color: var(--primary-color);
-
+    display: inline;
+    min-width: 113px;
+    max-width: 113px;
 }
 .lang-button{
     background-color: var(--secondary-color);
@@ -111,7 +113,47 @@ footer{
     background-color: var(--secondary-color);
     min-width: 960px;
     border-radius: 30px 0 0 0;
+    margin-top: 100px;
+    color: var(--primary-color);
+    align-items: center;
+    display: flex;
 }
+#logo-img-in-footer{
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+    margin-left: 50px;
+}
+.div-in-footer-2{
+    display: flex;
+    flex-direction: column;
+
+}
+.socialnetwork{
+    height: 50px;
+    width: 50px;
+}
+.div-in-footer-1{
+    padding: 16px;
+    padding-left: 200px;
+}
+.div-in-footer-2{
+    padding-top: 26px;
+}
+.p-in-footer{
+    font-size: 24px;
+}
+#div-for-info{
+    display: flex;
+    position: absolute;
+    right: 180px;
+}
+
+
+
+
+
+
 
 .filling-of-site{
     /*height: 2000px;*/
@@ -136,6 +178,20 @@ footer{
   }
 
 
+@media only screen and (max-width: 966px) {
+    #lang-select {
+        left: 780px;
+    }
+
+}
+@media only screen and (max-width: 1050px) {
+    #div-for-info{
+        left: 380px;
+    }
+    #lang-select {
+        left: 780px;
+    }
+}
 
 
 
