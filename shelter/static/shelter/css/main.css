@@ -1,18 +1,7 @@
-/*admin*/
-/*      
-.add_for_admin{
-    height: 100px;
-    width: 100px;
-    border-radius: 50px;
-    position: absolute;
-    top: -120px;
-    left: 90%;
-    background-color: var(--third-color);
-}
-*/
+
 
 .wrapper-for-elem{
-    width: 240px;  /*      */
+    width: 245px;
     height: 300px;
     border: 1px solid var(--secondary-color);
     border-radius: 30px;
@@ -24,7 +13,7 @@
     box-shadow: 0px 0px 61px -36px rgba(0,0,0,0.96);
 }
 .photo-of-elem{
-    width: 210px;  /**/
+    width: 215px;
     height: 150px;
     border: 1px solid var(--secondary-color);
     border-right: 0px;
@@ -34,35 +23,23 @@
     border-radius: 30px 0 0 30px;
     text-align: left;
 }
-.img-of-elem{
+.short-discr-of-elem{
     width: 215px;
     height: 150px;
-    border-radius: 30px 0 0 30px;
-    text-align: left;
-}
-.short-discr-of-elem{
-    width: 210px;  /*  */
-    max-height: 400px;
     padding-left: 30px;
     position: absolute;
     top: 180px;
     font-size: 32px;
     line-height: 0.2;
-/*
-    display: flex;
-    flex-direction: column;
-    justify-content: center;*/
 }
 .button-for-el{
     padding: 0px;
     margin: 0px;
+    min-width: 302px;
+    max-width: 302px;
 }
 .descr-for-el{
     text-align: left;
-    font-size: 16px;
-    line-height: 1.2;
-    /*
-    margin: 0px;*/
 }
 
 
@@ -81,7 +58,6 @@
     justify-content: center;
     align-items: center;
 }
-/*
 .button-for-arr{
     width: 60px;
     height: 60px;
@@ -100,13 +76,16 @@
 }
 #left-button{
     transform: rotate(270deg);  
-}*/
+}
 
+
+.wrapper-for-frequently-asked-questions{
+    margin: 40px auto;
+}
 .frequently-asked-questions{
-    margin: 70px auto;
-    min-width: 1536px;
-    max-width: 1536px;
-    /*min-height: 1400px;*/
+    margin: 30px;
+    max-width: 1476px;
+    min-width: 830px;
     background-color: var(--secondary-color);
     border-radius: 30px;
     -webkit-box-shadow: 0px 0px 61px -36px rgba(0,0,0,0.96);
@@ -131,6 +110,7 @@
     border: 1px solid var(--secondary-color);
     display: flex;
     align-items: center; /* Вертикальне центрування */
+    position: relative;
 }
 .stub-for-question{
     height: 40px;
@@ -139,7 +119,7 @@
     font-size: 32px;
     padding-left: 50px;
     margin: auto 0px;
-    width: 1400px;
+    max-width: 1400px;
 }
 
 .hidden-answer{
@@ -153,6 +133,8 @@
     outline: none;
     background: none;
     padding: 0px;
+    position: absolute;
+    right: 10px;
 }
 .arr-question-button{
     height: 40px;
@@ -176,3 +158,32 @@
     border: none;
     outline: none;
 }
+
+.frequently-asked-questions{
+    min-width: 830px;
+}
+
+
+
+
+.filling-of-site{
+    min-width: 928px;             /*   */
+}
+
+
+@media only screen and (max-width: 1535px) {
+        .filling-of-site {
+            width: 1220px;
+        }
+        .wrapper-for-frequently-asked-questions{
+            width: 1220px;
+        }
+    }
+@media only screen and (max-width: 1219px) {
+        .filling-of-site {
+            width: 906px;
+        }
+        .wrapper-for-frequently-asked-questions{
+            width: 906px;
+        }
+    }
