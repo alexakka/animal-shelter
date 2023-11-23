@@ -60,32 +60,6 @@ def leave_application(request, animal_id):
     return render(request, 'application.html', context)
 
 
-# def add_animal(request):
-#     if request.method == 'POST':
-#         form = AddingAnimalForm(request.POST, request.FILES)
-
-#         # Check if the form is valid
-#         if form.is_valid():
-#             # Create a new animal object, but don't save it to the database yet
-#             new_animal = form.save(commit=False)
-
-#             # Get the shelter associated with the currently logged-in user
-#             user_shelter = Shelter.objects.get(owner=request.user)
-
-#             # Associate the animal with the shelter
-#             new_animal.shelter = user_shelter
-
-#             # Save the animal to the database
-#             new_animal.save()
-
-#             return redirect('dashboard')
-#     else:
-#         form = AddingAnimalForm()
-
-#     context = {'form': form}
-#     return render(request, 'addelem.html', context)
-
-
 def add_animal(request):
     shelter = Shelter.objects.get(owner=request.user)
     if request.method == 'POST':
