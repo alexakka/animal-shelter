@@ -17,15 +17,15 @@ class ShelterCreationForm(forms.ModelForm):
 class AddingAnimalForm(forms.ModelForm):
     class Meta:
         model = Animal
-        fields = ['animal_name', 'species', 'breed', 'age', 'description', 'image', 'available']
-        # fields = [
-        #     'animal_name',
-        #     'species',
-        #     'breed',
-        #     'age',
-        #     'description',
-        #     'image'
-        #     ]
+        fields = [
+            'animal_name',
+            'species',
+            'breed', 'age',
+            'description',
+            'image',
+            'available'
+            ]
+
 
 
 
