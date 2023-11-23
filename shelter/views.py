@@ -1,7 +1,8 @@
+from django.urls import reverse
 from django.shortcuts import get_object_or_404, render, redirect
 from django.contrib.auth import login
 from django.contrib.auth.decorators import login_required
-from .forms import ShelterCreationForm, LeaveAnApplicationForm
+from .forms import ShelterCreationForm, LeaveAnApplicationForm, AddingAnimalForm
 from .models import Shelter, Animal
 
 
@@ -40,21 +41,6 @@ def shelter_dashboard(request, user_id):
     return render(request, 'adminindex.html', {'animals': animals})
 
 
-# def leave_application(request, animal_id):
-#     if request.method != 'POST':
-#         form = LeaveAnApplicationForm()
-#     else:
-#         form = LeaveAnApplicationForm(data=request.POST)
-#         if form.is_valid():
-#             new_application = form.save(commit=False)
-#             new_application.animal = animal_id
-#             new_application.save()
-
-#             return redirect('index')
-
-#     context = {'form': form}
-#     return render(request, 'application.html', context)
-
 
 def leave_application(request, animal_id):
     animal = Animal.objects.get(id=animal_id)
@@ -72,3 +58,44 @@ def leave_application(request, animal_id):
 
     context = {'form': form, 'animal': animal}
     return render(request, 'application.html', context)
+
+
+# def add_animal(request):
+#     if request.method == 'POST':
+#         form = AddingAnimalForm(request.POST, request.FILES)
+
+#         # Check if the form is valid
+#         if form.is_valid():
+#             # Create a new animal object, but don't save it to the database yet
+#             new_animal = form.save(commit=False)
+
+#             # Get the shelter associated with the currently logged-in user
+#             user_shelter = Shelter.objects.get(owner=request.user)
+
+#             # Associate the animal with the shelter
+#             new_animal.shelter = user_shelter
+
+#             # Save the animal to the database
+#             new_animal.save()
+
+#             return redirect('dashboard')
+#     else:
+#         form = AddingAnimalForm()
+
+#     context = {'form': form}
+#     return render(request, 'addelem.html', context)
+
+
+def add_animal(request):
+    shelter = Shelter.objects.get(owner=request.user)
+    if request.method == 'POST':
+        form = AddingAnimalForm(request.POST, request.FILES)
+        if form.is_valid():
+            new_animal = form.save(commit=False)
+            new_animal.shelter = shelter
+            new_animal.save()
+            return redirect(reverse('dashboard', args=[request.user.id]))
+    else:
+        form = AddingAnimalForm()
+
+    return render(request, 'addelem.html', {'form': form})

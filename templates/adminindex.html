@@ -29,8 +29,9 @@
     </header>
 
     <div class="filling-of-site">
-        <button class="add_for_admin"><img class="add-plus" src="{% static 'shelter/img/plus-svgrepo-com.svg' %}" alt="add"></button> <!--кнопка яка відкриває adminelem.html-->
-
+        <a href="{% url 'add_animal' %}">
+            <button class="add_for_admin"><img class="add-plus" src="{% static 'shelter/img/plus-svgrepo-com.svg' %}" alt="add"></button> <!--кнопка яка відкриває adminelem.html-->
+        </a>
         <div style=" display: flex;"> <!--рядок для 5 елeментів-->
 
             {% for animal in animals %}

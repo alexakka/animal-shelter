@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +10,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="{% static 'shelter/css/headerplusfooter.css' %}">
     <link rel="stylesheet" href="{% static 'shelter/css/main.css' %}">
-    <link rel="stylesheet" href="css/elem.css">
+    <link rel="stylesheet" href="{% static 'shelter/css/elem.css' %}">
     <!--admin-->
     <link rel="stylesheet" href="{% static 'shelter/css/admin.css' %}">
     <script src="{% static 'shelter/js/admin.js' %}"></script>
@@ -18,7 +20,7 @@
 
 <body>
     <header>
-        
+
         <img id="logo-img" src="{% static 'shelter/img/round-logo.png' %}" alt="name-logo">
         <h1 class="name-logo">Loving Tails</h1>
         <div id="lang-select">
@@ -26,17 +28,18 @@
             <button class="lang-button">|</button>
             <button class="lang-button">EN</button>
         </div>
-        
+
     </header>
 
 
     <div id="div2" style="display: block;" class="filling-of-site" >
-        <form action="/your-server-endpoint" method="post">
+        <form method="post" action="{% url 'add_animal' %}" enctype="multipart/form-data">
+            {% csrf_token %}
             <div class="wrapper-for-descr">
                 <div class="photo-of-elem-for-an">
                     <div class="div1-in-photo-el">
-                        <label class="add-photo-el" for="file"></label>
-                        <input class="add-photo-el" type="file" name="file" id="file">
+                        <label class="add-photo-el" for="{{ form.image.id_for_label }}"></label>
+                        <input class="add-photo-el" type="file" id="{{ form.image.id_for_label }}" name="{{ form.image.name }}">
                     </div>
                     <div class="div2-in-photo-el">
                         <p class="div2-in-photo-el-p">ДОДАТИ ФОТО</p>
@@ -44,22 +47,20 @@
                 </div>
 
                 <div class="description-of-the-animal">
-                    <input class="input-desc" type="text" name="username" placeholder="name">
-                    <input class="input-desc" type="text" name="breed" placeholder="breed">
-                    <input class="input-desc" type="text" name="age" placeholder="age">
-                    <input class="input-desc" type="text" name="phone" placeholder="phone">
-                    <input class="input-desc" type="text" name="email" placeholder="email">
-                    <input class="input-desc" type="text" name="location" placeholder="location">
+
+                    <input class="input-desc" type="text" id="{{ form.animal_name.id_for_label }}" name="{{ form.animal_name.name }}" placeholder="Кличка">
+                    <input class="input-desc" type="text" id="{{ form.species.id_for_label }}" name="{{ form.species.name }}" placeholder="Вид">
+                    <input class="input-desc" type="text" id="{{ form.breed.id_for_label }}" name="{{ form.breed.name }}" placeholder="Порода">
+                    <input class="input-desc" type="text" id="{{ form.age.id_for_label }}" name="{{ form.age.name }}" placeholder="Вік">
+
                 </div>
 
             </div>
 
             <div class="div-for-descr">
-                <textarea id="resizableTextarea" oninput="resizeTextarea()" class="textarea-for-descr" id="multilineInput" rows="4" cols="50" placeholder="description"></textarea>
+                <textarea id="resizableTextarea" oninput="resizeTextarea()" class="textarea-for-descr" id="multilineInput" name="{{ form.description.name }}" rows="4" cols="50" placeholder="Опис"></textarea>
             </div>
-
-            <button onclick="reloadPage()" class="admin-button admin-button-delete"><p class="p-admin">SAVE</p></button> <!--ця кнопка має перезапустити сторінку вже із новими значеннями-->
-            <!--в мене кидає помилку але це напевно бо в мене намає БД. P.s.: onclick="reloadPage()" - перезапускає сторінку-->
+            <button class="admin-button admin-button-delete"><p class="p-admin">Додати</p></button>
         </form>
     </div>
 

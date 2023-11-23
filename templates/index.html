@@ -94,7 +94,18 @@
             <div  id="toggleDiv3" class="hidden-answer">
                 <p></p>
                 {% if user.is_authenticated %}
+                <p id="block-to-join">
+                    <a href="{% url 'dashboard' user.id %}">
+                        <button class="button-to-join" >Особистий кабінет</button>
+                    </a>
 
+                    <button class="button-to-join">|</button>
+
+                    <a href="{% url 'register' %}">
+                        <button class="button-to-join" >Вийти</button>
+                    </a>
+                </p>
+                {% else %}
                 <p id="block-to-join">
                     <a href="{% url 'user_login' %}">
                         <button class="button-to-join" >Увійти</button>
@@ -106,18 +117,6 @@
                         <button class="button-to-join" >Реєстрація</button>
                     </a>
                 </p>
-                {% else %}
-                <p id="block-to-join">
-                        <a href="{% url 'dashboard' user.id %}">
-                            <button class="button-to-join" >Особистий кабінет</button>
-                        </a>
-
-                        <button class="button-to-join">|</button>
-
-                        <a href="{% url 'register' %}">
-                            <button class="button-to-join" >Вийти</button>
-                        </a>
-                    </p>
                 {% endif %}
 
 
