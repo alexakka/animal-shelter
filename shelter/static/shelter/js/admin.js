@@ -21,3 +21,31 @@ function reloadPage() {
 // Викликаємо метод перезавантаження сторінки
     location.reload();
 }
+
+
+
+
+
+
+
+/// оновлення фото під час додавання у форму
+function previewImage(input) {
+    var preview = document.getElementById('imagePreview');
+    var file = input.files[0];
+    var reader = new FileReader();
+
+    reader.onloadend = function () {
+        preview.src = reader.result;
+    };
+
+    if (file) {
+        reader.readAsDataURL(file);
+    } else {
+        preview.src = "#";
+    }
+}
+
+function submitForm() {
+ // You can add additional validation or processing here
+    document.getElementById('animalForm').submit();
+}

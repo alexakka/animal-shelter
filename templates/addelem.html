@@ -38,8 +38,10 @@
             <div class="wrapper-for-descr">
                 <div class="photo-of-elem-for-an">
                     <div class="div1-in-photo-el">
-                        <label class="add-photo-el" for="{{ form.image.id_for_label }}"></label>
-                        <input class="add-photo-el" type="file" id="{{ form.image.id_for_label }}" name="{{ form.image.name }}">
+                        <label class="add-photo-el" for="{{ form.image.id_for_label }}">
+                            <img class="photo-el" id="imagePreview" src="#" alt="Image Preview" />
+                        </label>
+                        <input class="add-photo-el" type="file" id="{{ form.image.id_for_label }}" name="{{ form.image.name }}" onchange="previewImage(this)">
                     </div>
                     <div class="div2-in-photo-el">
                         <p class="div2-in-photo-el-p">ДОДАТИ ФОТО</p>
