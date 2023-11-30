@@ -40,7 +40,7 @@
 
             {% for animal in animals %}
 
-                <a href="{% url 'animal_detail' animal.id %}">
+                <a href="{% url 'adminelem' animal.id %}">
                     <button class="button-for-el">
                         <div class="wrapper-for-elem">
                             <div class="photo-of-elem">
@@ -48,7 +48,6 @@
                             </div>
                             <div class="short-discr-of-elem">
                                 <p class="descr-for-el">{{ animal.animal_name }}</p>
-                                <p class="descr-for-el">{{animal.shelter.address}}</p>
                             </div>
                         </div>
                     </button>

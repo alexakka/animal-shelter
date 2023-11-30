@@ -9,5 +9,7 @@ urlpatterns = [
     path('shelter/create_shelter/', views.create_shelter, name='create_shelter'),
     path('shelter/dashboard/<int:user_id>', views.shelter_dashboard, name='dashboard'),
     path('shelter/dashboard/add_animal/', views.add_animal, name='add_animal'),
+    path('shelter/dashboard/adminelem/<int:animal_id>/', views.animal_detail2, name='adminelem'),
+
 
 ]

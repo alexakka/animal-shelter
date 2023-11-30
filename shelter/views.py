@@ -16,6 +16,9 @@ def animal_detail(request, animal_id):
     animal = get_object_or_404(Animal, pk=animal_id)
     return render(request, 'animal_detail.html', {'animal': animal})
 
+def animal_detail2(request, animal_id):
+    animal = get_object_or_404(Animal, pk=animal_id)
+    return render(request, 'adminelem.html', {'animal': animal})
 
 @login_required
 def create_shelter(request):
