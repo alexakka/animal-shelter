@@ -36,7 +36,7 @@
         <a href="{% url 'add_animal' %}">
             <button class="add_for_admin"><img class="add-plus" src="{% static 'shelter/img/plus-svgrepo-com.svg' %}" alt="add"></button> <!--кнопка яка відкриває adminelem.html-->
         </a>
-        <div style=" display: flex;"> <!--рядок для 5 елeментів-->
+
 
             {% for animal in animals %}
 
@@ -48,7 +48,7 @@
                             </div>
                             <div class="short-discr-of-elem">
                                 <p class="descr-for-el">{{ animal.animal_name }}</p>
-                                <p class="descr-for-el">{{animal.species}}</p>
+                                <p class="descr-for-el">{{animal.shelter.address}}</p>
                             </div>
                         </div>
                     </button>
@@ -58,7 +58,6 @@
             <!--end-->
 
 
-        </div>
 
 
 
@@ -71,8 +70,8 @@
         <div id="div-for-info">
             <div class="div-in-footer-1">
                 <p class="p-in-footer">Інформація про нас:</p>
-                <p class="p-in-footer">lovingtails@gmail.com</p>
-                <p class="p-in-footer">+380967387292</p>
+                <p class="p-in-footer">xxxxxxxxx@gmail.com</p>
+                <p class="p-in-footer">+380XXXXXXXXX</p>
             </div>
             <div class="div-in-footer-2">
                 <a href="https://www.instagram.com/loveyoustepan/">
