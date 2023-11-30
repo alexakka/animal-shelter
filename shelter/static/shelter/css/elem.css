@@ -71,6 +71,8 @@ input[type="file"] {
     max-height: 384px;
     max-width: 690px;
     border-radius: 20px;
+    position: absolute;
+    top: 0px;
 }
 
 .div1-in-photo-el{
