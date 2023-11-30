@@ -36,3 +36,6 @@ class Application(models.Model):
     email = models.EmailField(max_length=255)
     status = models.BooleanField(default=True)
     animal = models.ForeignKey('Animal', on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.first_name + ' ' + self.second_name
